@@ -1,9 +1,13 @@
 #include <cstdio>
+#include "VectorPerson.h"
 
-int main(int argc, const char ** argv)
+int main(int argc, const char** argv)
 {
-	puts("Main Program begin");
+  
+  VectorPerson vperson;
+  vperson.writeVector();
+   vperson.writeVector();
+  vperson.printVector();
 
-
-
+    return 0;
 }
