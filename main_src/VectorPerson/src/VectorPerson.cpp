@@ -6,7 +6,7 @@ VectorPerson::VectorPerson() {}
 void VectorPerson::writeVector() 
 {
 	
-    //store in vector buf1.name
+    //store in struct buf1.name
     char temp[30];
     static int len=0;
     memset(temp,0,30);
@@ -18,7 +18,7 @@ void VectorPerson::writeVector()
     temp[len]='\0';
     strncpy(buf1.name,temp,len+1);
 
-    //store in vector buf1.age
+    //store in struct buf1.age
     memset(temp,0,30);
     fputs("age: ",stdout);
     fflush(stdout);
@@ -29,7 +29,7 @@ void VectorPerson::writeVector()
     buf1.age = std::atoi(temp);
     
 
-//store in vector buf1.height
+    //store in struct buf1.height
     memset(temp,0,30);
     fputs("height: ",stdout);
     fflush(stdout);
@@ -39,15 +39,25 @@ void VectorPerson::writeVector()
     temp[len]='\0';
     buf1.height = strtod(temp,NULL);
 
+    //store all in vector
     vector_person.push_back(buf1);
 }
-//print vector in console
+//print data from vector to console
 void VectorPerson::printVector() 
 {
-	for(Person v : vector_person){
-		printf("Person: %s is %d year old & %.2f tall\n",v.name,v.age,v.height);
-	}
+	for (int i = 0; i < vector_person.size(); i++)
+    {
+        printf("%d Person: %s is %d year old & %.2f tall\n",i,vector_person[i].name,vector_person[i].age,vector_person[i].height);
+    }
+		
+	
 }
+// get specific data 
+void VectorPerson::show() 
+{
+   
+        printf("%d : show-->Person: %s is %d year old & %.2f tall\n",1, vector_person[1].name,vector_person[1].age,vector_person[1].height); 
 
+}
 
 VectorPerson::~VectorPerson() {}

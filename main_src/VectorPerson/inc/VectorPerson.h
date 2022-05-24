@@ -15,6 +15,8 @@ public:
 	void writeVector();
 	void printVector();
 
+	void show();
+
 	~VectorPerson();
 	
 };

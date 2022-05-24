@@ -9,5 +9,6 @@ int main(int argc, const char** argv)
    vperson.writeVector();
   vperson.printVector();
 
+  vperson.show();
     return 0;
 }
