@@ -50,5 +50,8 @@ _deps
 # External projects
 *-prefix/
 
+### build folder file and folder ###
+/build/*
+
 ### sublime text ###
 *.sublime-*
