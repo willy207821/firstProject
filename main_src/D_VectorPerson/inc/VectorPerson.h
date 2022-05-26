@@ -5,20 +5,25 @@
 #include <cstring>
 #include <cstdio>
 #include <cstdlib>
+#include <Person.h>
 
-class VectorPerson:public Person {
+
+
+class VectorPerson {
 protected:
 	std::vector<Person>vector_person;
 	Person buf1;
 public:
 	VectorPerson();
-	void writeVector();
-	void printVector();
 
-	void show();
+	void writeVector();
+
+	std::vector<Person>getDataVector();
+
+	void printVector();
+	void findPerson();
 
 	~VectorPerson();
-	
 };
 
 #endif

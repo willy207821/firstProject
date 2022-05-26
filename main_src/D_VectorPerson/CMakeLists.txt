@@ -3,6 +3,5 @@ add_library(v_person
 
 target_include_directories(v_person PUBLIC inc)
 
-add_subdirectory(Person)
-
 target_link_libraries(v_person PUBLIC person)
+

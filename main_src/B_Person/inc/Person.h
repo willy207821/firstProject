@@ -9,10 +9,9 @@ public:
 	int age;
 	char name[30];
 	double height;
-public: 
+public:
 	Person();
 	~Person();
 
 };
-
 #endif

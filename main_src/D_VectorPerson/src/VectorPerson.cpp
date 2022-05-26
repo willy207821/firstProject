@@ -2,10 +2,11 @@
 
 VectorPerson::VectorPerson() {}
 
+
 //write in vector
-void VectorPerson::writeVector() 
+void VectorPerson::writeVector()
 {
-	
+
     //store in struct buf1.name
     char temp[30];
     static int len=0;
@@ -27,7 +28,7 @@ void VectorPerson::writeVector()
     len=strlen(temp)-1;
     temp[len]='\0';
     buf1.age = std::atoi(temp);
-    
+
 
     //store in struct buf1.height
     memset(temp,0,30);
@@ -42,6 +43,14 @@ void VectorPerson::writeVector()
     //store all in vector
     vector_person.push_back(buf1);
 }
+
+//get vector data
+
+	std::vector<Person>VectorPerson::getDataVector()
+	{
+		return vector_person;
+	}
+
 //print data from vector to console
 void VectorPerson::printVector() 
 {
@@ -49,15 +58,29 @@ void VectorPerson::printVector()
     {
         printf("%d Person: %s is %d year old & %.2f tall\n",i,vector_person[i].name,vector_person[i].age,vector_person[i].height);
     }
-		
-	
-}
-// get specific data 
-void VectorPerson::show() 
-{
-   
-        printf("%d : show-->Person: %s is %d year old & %.2f tall\n",1, vector_person[1].name,vector_person[1].age,vector_person[1].height); 
 
+
+}
+// get specific data
+void VectorPerson::findPerson()
+{
+	char fname[30];
+	int fnlen=0;
+	fputs("find Person Type Here: ",stdout);
+    fflush(stdout);
+    fgets(fname,30,stdin);
+    fflush(stdin);
+    fnlen=strlen(fname)-1;
+    fname[fnlen]='\0';
+
+	for (int i = 0; i < vector_person.size(); i++)
+{		
+		int fresult =strcmp(fname,vector_person[i].name);
+		if(fresult == 0){
+        printf("%d : Person found: %s is %d year old & %.2f tall\n",i, vector_person[i].name,vector_person[i].age,vector_person[i].height); 
+
+		}
+	}
 }
 
 VectorPerson::~VectorPerson() {}
