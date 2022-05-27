@@ -7,6 +7,7 @@
 
 int main(int argc, const char** argv)
 {
+	puts("Main program");
 
 	std::vector<Person>p;
 	VectorPerson vperson;
