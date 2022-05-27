@@ -62,7 +62,6 @@ void VectorPerson::printVector()
 
 }
 // get specific data
-<<<<<<< HEAD:main_src/D_VectorPerson/src/VectorPerson.cpp
 void VectorPerson::findPerson()
 {
 	char fname[30];
@@ -73,21 +72,14 @@ void VectorPerson::findPerson()
     fflush(stdin);
     fnlen=strlen(fname)-1;
     fname[fnlen]='\0';
-=======
-void VectorPerson::show()
-{
-
-        printf("%d : show-->Person: %s is %d year old & %.2f tall\n",1, vector_person[1].name,vector_person[1].age,vector_person[1].height); 
->>>>>>> 9d034beaaf29665d067e30b8f9b4794d7f3bb8d9:main_src/VectorPerson/src/VectorPerson.cpp
-
-	for (int i = 0; i < vector_person.size(); i++)
-{		
-		int fresult =strcmp(fname,vector_person[i].name);
+	for (int i = 0; i < vector_person.size(); i++){
+	int fresult =strcmp(fname,vector_person[i].name);
 		if(fresult == 0){
-        printf("%d : Person found: %s is %d year old & %.2f tall\n",i, vector_person[i].name,vector_person[i].age,vector_person[i].height); 
-
+    	printf("%d : Person found: %s is %d year old & %.2f tall\n",i, vector_person[i].name,vector_person[i].age,vector_person[i].height); 
 		}
+
 	}
+
 }
 
 VectorPerson::~VectorPerson() {}
