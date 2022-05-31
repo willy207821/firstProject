@@ -11,14 +11,17 @@
 
 class VectorPerson {
 protected:
-	std::vector<Person>vector_person;
+	const char * fn="test.bin";
 	Person buf1;
+	
 public:
 	VectorPerson();
 
 	void writeVector();
 
 	std::vector<Person>getDataVector();
+	void save_file();
+	void load_file();
 
 	void printVector();
 	void findPerson();

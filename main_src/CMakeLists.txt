@@ -1,5 +1,5 @@
-add_subdirectory(D_VectorPerson)
-add_subdirectory(B_Person)
+add_subdirectory(VectorPerson)
+add_subdirectory(Person)
 
 
 add_executable(v_test main.cpp)

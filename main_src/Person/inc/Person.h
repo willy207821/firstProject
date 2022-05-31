@@ -14,4 +14,5 @@ public:
 	~Person();
 
 };
+extern std::vector<Person>vp;
 #endif
